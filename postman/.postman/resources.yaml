@@ -1,0 +1,7 @@
+# Use this workspace to collaborate
+workspace:
+  id: 9c995f26-aec0-4141-82db-549bfb0c7cdf
+
+localResources:
+  collections:
+    - ../postman/collections/Baozi Store

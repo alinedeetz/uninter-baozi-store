@@ -1,0 +1,7 @@
+$kind: collection
+description: "API REST da Baozi Store. Execute as pastas na ordem: os POST guardam os IDs criados nas variáveis da coleção, e as exclusões ficam por último porque um cliente ou produto com pedido não pode ser excluído."
+variables:
+  baseUrl: http://localhost:8080
+  clienteId: "1"
+  produtoId: "1"
+  pedidoId: "1"

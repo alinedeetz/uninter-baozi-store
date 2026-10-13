@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{baseUrl}}/produtos/{{produtoId}}"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "nome": "Baozi Tradicional",
+      "preco": 13.00,
+      "estoque": true
+    }
+scripts:
+  - type: afterResponse
+    code: pm.test('200 OK', () => pm.response.to.have.status(200));
+    language: text/javascript
+order: 4000

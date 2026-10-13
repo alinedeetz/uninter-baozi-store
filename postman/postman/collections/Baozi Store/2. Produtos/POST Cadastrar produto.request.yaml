@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{baseUrl}}/produtos"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "nome": "Baozi Tradicional",
+      "preco": 12.50,
+      "estoque": true
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('201 Created', () => pm.response.to.have.status(201));
+      pm.collectionVariables.set('produtoId', pm.response.json().id);
+    language: text/javascript
+order: 1000

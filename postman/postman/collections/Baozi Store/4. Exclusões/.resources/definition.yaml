@@ -1,0 +1,3 @@
+$kind: collection
+description: "Ordem obrigatória: pedido, depois produto e cliente. Excluir cliente ou produto que ainda tem pedido devolve 409."
+order: 4000

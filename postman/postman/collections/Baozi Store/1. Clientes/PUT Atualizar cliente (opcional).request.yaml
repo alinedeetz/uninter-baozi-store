@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{baseUrl}}/clientes/{{clienteId}}"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "nome": "Aline dos Santos Mattos 5497233",
+      "clienteDesde": "2026-10-01"
+    }
+scripts:
+  - type: afterResponse
+    code: pm.test('200 OK', () => pm.response.to.have.status(200));
+    language: text/javascript
+order: 4000
